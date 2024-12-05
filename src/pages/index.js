@@ -1,4 +1,8 @@
+import CounterControls from "@/components/CounterControls";
+import CounterDisplay from "@/components/CounterDisplay";
 import TemperatureConverter from "@/components/TemperatureConverter";
+import Timer from "@/components/Timer";
+import { CounterProvider } from "@/context/CounterContext";
 import Link from "next/link";
 
 export default function Home() {
@@ -9,6 +13,14 @@ export default function Home() {
 			<br />
 			<Link href="/contact">Go to Contact Page</Link>
 			<TemperatureConverter />
+			<br />
+			<CounterProvider>
+				<div>
+					<CounterDisplay />
+					<CounterControls />
+				</div>
+			</CounterProvider>
+			<Timer />
 		</div>
 	);
 }

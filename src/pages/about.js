@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect, useCallback } from "react";
+import PostItem from "@/components/PostItem";
 
 export default function About() {
 	const [items, setItems] = useState([]);
@@ -19,7 +20,12 @@ export default function About() {
 			}
 		}
 		fetchItems();
-	});
+	}, []);
+
+	const logPostId = useCallback((id) => {
+		console.log(`Post ID: ${id}`);
+	}, []);
+
 	return (
 		<div>
 			<h1>About this App</h1>
@@ -28,7 +34,7 @@ export default function About() {
 			) : (
 				<ul>
 					{items.map((item) => (
-						<li key={item.id}>{item.title}</li>
+						<PostItem key={item.id} post={item} onLogId={logPostId} />
 					))}
 				</ul>
 			)}
