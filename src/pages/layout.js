@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { CounterProvider } from "@/context/CounterContext"; // Adjust the path if necessary
-import "./globals.css";
 
 export default function RootLayout({ children }) {
 	return (
