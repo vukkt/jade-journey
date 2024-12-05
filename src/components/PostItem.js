@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const PostItem = React.memo(function PostItem({ post, onLogId }) {
@@ -6,9 +7,9 @@ const PostItem = React.memo(function PostItem({ post, onLogId }) {
 		<li>
 			<h3>{post.title}</h3>
 			<p>{post.body}</p>
-			<button onClick={() => onLogId(post.id)}>Log ID</button>
+			<Link href={`/post/${post.id}`}>Read More</Link>
 		</li>
 	);
 });
 
-export default PostItem;
+export default React.memo(PostItem);
