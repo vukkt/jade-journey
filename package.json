@@ -1,20 +1,30 @@
 {
-	"name": "jade-journey",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint"
-	},
-	"dependencies": {
-		"react": "^19.0.0",
-		"react-dom": "^19.0.0",
-		"next": "15.0.4"
-	},
-	"devDependencies": {
-		"eslint": "^8",
-		"eslint-config-next": "15.0.4"
-	}
+  "name": "jade-journey",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext .js,.jsx",
+	"lint:fix": "next lint --fix",
+    "format": "prettier --write \"**/*.{js,jsx,json,css,md}\""
+  },
+  "dependencies": {
+    "next": "15.0.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.16.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "15.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.25.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "prettier": "^3.4.2"
+  }
 }
