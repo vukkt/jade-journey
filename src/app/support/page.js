@@ -1,7 +1,7 @@
 // src/app/support/page.js
 import Head from 'next/head';
+import Link from 'next/link'; // Imported before CSS
 import styles from './Support.module.css';
-import Link from 'next/link';
 
 export default function Support() {
   return (

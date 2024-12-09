@@ -1,12 +1,13 @@
-// src/components/Header.js
 'use client';
+
+import { FaMoon, FaSun, FaLeaf } from 'react-icons/fa'; // Corrected import path
 import Link from 'next/link';
-import styles from './Header.module.css';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
-import { FaMoon, FaSun, FaLeaf } from 'react-icons/fa';
+import styles from './Header.module.css';
 
-const Header = () => {
+function Header() {
+  // Changed to function declaration
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -48,6 +49,7 @@ const Header = () => {
         </ul>
       </nav>
       <button
+        type="button" // Added type="button"
         className={styles.themeToggle}
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         aria-label="Toggle Dark Mode"
@@ -56,6 +58,6 @@ const Header = () => {
       </button>
     </header>
   );
-};
+}
 
 export default Header;

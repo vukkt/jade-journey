@@ -1,10 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import { FaFacebook, FaXTwitter, FaInstagram } from 'react-icons/fa6';
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'; // Corrected import path and icon names
 import styles from './Footer.module.css';
 
-const Footer = () => {
+function Footer() {
+  // Changed to function declaration
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
@@ -33,10 +34,10 @@ const Footer = () => {
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="X (Twitter)"
+            aria-label="Twitter"
             className={styles.socialIcon}
           >
-            <FaXTwitter />
+            <FaTwitter />
           </a>
           <a
             href="https://instagram.com"
@@ -54,6 +55,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

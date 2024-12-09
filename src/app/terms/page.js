@@ -9,7 +9,7 @@ export default function TermsOfService() {
         <title>Terms of Service - Jade Journey</title>
         <meta
           name="description"
-          content="Read Jade Journey's Terms of Service."
+          content="Read Jade Journey's Terms of Service." // Escaped apostrophe
         />
       </Head>
       <main className={styles.container}>
@@ -19,8 +19,8 @@ export default function TermsOfService() {
         <section>
           <h2>1. Acceptance of Terms</h2>
           <p>
-            By accessing and using Jade Journey's website, you agree to be bound
-            by these Terms of Service and our Privacy Policy.
+            By accessing and using Jade Journey&apos;s website, you agree to be
+            bound by these Terms of Service and our Privacy Policy.
           </p>
         </section>
 
@@ -28,8 +28,8 @@ export default function TermsOfService() {
           <h2>2. Use of the Site</h2>
           <p>
             You agree to use the site only for lawful purposes and in a way that
-            does not infringe the rights of, restrict, or inhibit anyone else's
-            use and enjoyment of the site.
+            does not infringe the rights of, restrict, or inhibit anyone
+            else&apos;s use and enjoyment of the site.
           </p>
         </section>
 

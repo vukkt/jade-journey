@@ -1,7 +1,10 @@
+// src/app/page.js
+
 'use client';
+
 import { useRef, useEffect } from 'react';
-import styles from './page.module.css';
 import Head from 'next/head';
+import styles from './page.module.css'; // Ensure the file is named 'page.module.css'
 
 export default function Home() {
   const videoRef = useRef(null);
@@ -36,25 +39,39 @@ export default function Home() {
           playsInline
         />
         <div className={styles.heroContent}>
-          <h1>Welcome to My Home page</h1>
-          <p>Your one-stop page for amazing services.</p>
-          <button className={styles.button}>Explore</button>
+          <h1 className={styles.heading}>Welcome to My Home page</h1>{' '}
+          {/* Added className */}
+          <p className={styles.paragraph}>
+            Your one-stop page for amazing services.
+          </p>{' '}
+          {/* Added className */}
+          <button type="button" className={styles.button}>
+            Explore
+          </button>
         </div>
       </section>
 
       {/* Features Section */}
       <section className={styles.features}>
         <div className={styles.feature}>
-          <h3>Quality Products</h3>
-          <p>We offer only the best products for our customers.</p>
+          <h3 className={styles.featureHeading}>Quality Products</h3>{' '}
+          {/* Added className */}
+          <p className={styles.featureParagraph}>
+            We offer only the best products for our customers.
+          </p>{' '}
+          {/* Added className */}
         </div>
         <div className={styles.feature}>
-          <h3>Fast Delivery</h3>
-          <p>Get your orders delivered to your doorstep quickly.</p>
+          <h3 className={styles.featureHeading}>Fast Delivery</h3>
+          <p className={styles.featureParagraph}>
+            Get your orders delivered to your doorstep quickly.
+          </p>
         </div>
         <div className={styles.feature}>
-          <h3>24/7 Support</h3>
-          <p>Our support team is here to help you anytime.</p>
+          <h3 className={styles.featureHeading}>24/7 Support</h3>
+          <p className={styles.featureParagraph}>
+            Our support team is here to help you anytime.
+          </p>
         </div>
       </section>
 
