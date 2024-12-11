@@ -1,24 +1,35 @@
 'use client';
 
-import { FaMoon, FaSun, FaLeaf } from 'react-icons/fa'; // Corrected import path
+import { FaMoon, FaSun, FaLeaf } from 'react-icons/fa';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import styles from './Header.module.css';
 
 function Header() {
-  // Changed to function declaration
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   if (!mounted) return null;
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.logo}>
         <Link href="/" className={styles.logoLink}>
           <FaLeaf className={styles.logoIcon} />
@@ -49,7 +60,7 @@ function Header() {
         </ul>
       </nav>
       <button
-        type="button" // Added type="button"
+        type="button"
         className={styles.themeToggle}
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         aria-label="Toggle Dark Mode"

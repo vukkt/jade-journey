@@ -1,37 +1,27 @@
-/* src/components/Header.module.css */
-
 .header {
-  background-color: var(--header-background);
-  padding: 20px 30px;
+  position: fixed; /* Keeps the header at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding in the width */
+  background-color: var(--header-background); /* Dynamic based on theme */
+  backdrop-filter: blur(10px); /* Glass-like blur effect */
+  padding: 10px 30px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.3s;
-}
-
-.logoLink {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--text-color);
-  text-decoration: none;
-  transition: color 0.3s;
+  justify-content: space-between; /* Space between logo and navigation */
+  align-items: center; /* Vertically aligns items */
+  z-index: 1000; /* Keeps header above content */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .navList {
   list-style: none;
   display: flex;
-  gap: 15px;
-}
-
-.navLink {
-  color: var(--text-color);
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s;
-}
-
-.navLink:hover {
-  color: var(--link-color);
+  gap: 15px; /* Space between nav links */
+  margin: 0; /* Reset margin for alignment */
 }
 
 .themeToggle {
@@ -39,22 +29,22 @@
   border: none;
   cursor: pointer;
   color: var(--text-color);
+  font-size: 1.5rem; /* Adjust size for better visibility */
+  transition: color 0.3s ease-in-out; /* Smooth hover transition */
+  margin-left: 15px; /* Add spacing from navigation items */
   font-size: 1.2rem;
-  transition: color 0.3s;
 }
 
 .themeToggle:hover {
-  color: var(--link-color);
+  color: var(--link-color); /* Match hover color */
 }
 
 .logoIcon {
-  font-size: 1.2rem; /* Adjust size as needed */
+  font-size: 1.2rem;
   color: var(--text-color);
-  transition: color 0.3s;
+  margin-right: 10px; /* Add space between icon and text */
 }
 
-.logoLink {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+.logoIcon:hover {
+  color: var(--link-color); /* Match hover color */
 }

@@ -3,18 +3,18 @@
 /* Define CSS variables for light and dark themes */
 :root {
   --background-color: #ffffff;
-  --text-color: #333333;
-  --link-color: #0070f3;
-  --header-background: #f1f1f1;
+  --header-background: rgba(255, 255, 255, 0.8); /* Light header background */
+  --text-color: #000; /* Light text color */
+  --link-color: #0071e3; /* Light link hover color */
   --footer-background: #f1f1f1;
   /* Add more variables as needed */
 }
 
 .dark {
   --background-color: #121212;
-  --text-color: #ffffff;
-  --link-color: #1e90ff;
-  --header-background: #1f1f1f;
+  --header-background: rgba(0, 0, 0, 0.8); /* Dark header background */
+  --text-color: #fff; /* Dark text color */
+  --link-color: #1e90ff; /* Dark link hover color */
   --footer-background: #1f1f1f;
   /* Add more variables as needed */
 }
