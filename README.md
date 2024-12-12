@@ -128,7 +128,7 @@ jade-journey/
 │ ├── videos/
 │ │ └── hero-background.mp4
 │ ├── images/
-│ │ └── logo.png
+│ │ └── hero-background.png
 │ └── favicon.ico
 ├── src/
 │ ├── app/
@@ -138,20 +138,33 @@ jade-journey/
 │ │ ├── about/
 │ │ │ ├── page.js
 │ │ │ └── About.module.css
+│ │ ├── privacy/
+│ │ │ ├── page.js
+│ │ │ └── Privacy.module.css
+│ │ ├── terms/
+│ │ │ ├── page.js
+│ │ │ └── Terms.module.css
+│ │ ├── support/
+│ │ │ ├── page.js
+│ │ │ └── Support.module.css
 │ │ ├── page.js
+│ │ ├── layout.js
+│ │ ├── globals.css
 │ │ └── page.module.css
-│ ├── components/
-│ │ ├── Header.js
-│ │ ├── Footer.js
-│ │ └── ...other components
-│ ├── styles/
-│ │ └── globals.css
-│ └── ...other directories
+│ └── components/
+│   ├── Header.js
+│   ├── Header.module.css
+│   ├── Footer.module.css
+│   ├── Footer.js
+│   ├── Button.module.css
+│   └── Button.js
 ├── .eslintrc.json
 ├── .gitignore
 ├── package.json
+├── jsconfig.json
+├── next.config.mjs
 ├── README.md
-└── ...other configuration files
+└── yarn.lock
 ```
 
 ## Accessibility
