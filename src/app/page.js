@@ -46,7 +46,7 @@ export default function Home() {
           </p>{' '}
           {/* Added className */}
           <button type="button" className={styles.button}>
-            Explore
+            Apply Now
           </button>
         </div>
       </section>
