@@ -1,28 +1,28 @@
 'use client';
 
 import Link from 'next/link';
-import styles from './SignUpPage.module.css';
 import { FaEnvelope, FaApple, FaGoogle, FaFacebookF } from 'react-icons/fa';
+import styles from './SignUpPage.module.css';
 
 export default function SignUpPage() {
   const handleEmailClick = () => {
-    console.log('Sign up with Email button clicked');
-    // Integrate your email signup logic here, e.g., navigate to email signup flow
+    // Remove console.log for production
+    // Implement actual email signup logic
   };
 
   const handleAppleClick = () => {
-    console.log('Sign up with Apple button clicked');
-    // Integrate your Apple signup logic
+    // Remove console.log for production
+    // Implement actual Apple OAuth signup logic
   };
 
   const handleGoogleClick = () => {
-    console.log('Sign up with Google button clicked');
-    // Integrate your Google signup logic
+    // Remove console.log for production
+    // Implement actual Google OAuth signup logic
   };
 
   const handleFacebookClick = () => {
-    console.log('Sign up with Facebook button clicked');
-    // Integrate your Facebook signup logic
+    // Remove console.log for production
+    // Implement actual Facebook OAuth signup logic
   };
 
   return (
@@ -36,6 +36,7 @@ export default function SignUpPage() {
 
           {/* Email Button uses both oauthBtn and emailBtn classes */}
           <button
+            type="button"
             className={`${styles.oauthBtn} ${styles.emailBtn}`}
             onClick={handleEmailClick}
           >
@@ -43,28 +44,38 @@ export default function SignUpPage() {
             Sign up with Email
           </button>
 
-          <button className={styles.oauthBtn} onClick={handleAppleClick}>
+          <button
+            type="button"
+            className={styles.oauthBtn}
+            onClick={handleAppleClick}
+          >
             <FaApple className={styles.oauthIcon} />
             Sign up with Apple
           </button>
 
-          <button className={styles.oauthBtn} onClick={handleGoogleClick}>
+          <button
+            type="button"
+            className={styles.oauthBtn}
+            onClick={handleGoogleClick}
+          >
             <FaGoogle className={styles.oauthIcon} />
             Sign up with Google
           </button>
 
-          <button className={styles.oauthBtn} onClick={handleFacebookClick}>
+          <button
+            type="button"
+            className={styles.oauthBtn}
+            onClick={handleFacebookClick}
+          >
             <FaFacebookF className={styles.oauthIcon} />
             Sign up with Facebook
           </button>
 
-          <p className={styles.legalTextBottom}></p>
-
           <p className={styles.legalTextBottom}>
             By proceeding, you agree to receive marketing emails from
             JadeJourney.
-            <br></br> Try JadeJourney free for 3 days, no credit card required.
-            By proceeding, you are agreeing to our{' '}
+            <br /> Try JadeJourney free for 3 days, no credit card required. By
+            proceeding, you are agreeing to our{' '}
             <Link href="/terms">Terms of Service</Link> and{' '}
             <Link href="/privacy">Privacy Policy</Link>.
           </p>
