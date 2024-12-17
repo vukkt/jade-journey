@@ -1,10 +1,9 @@
-// src/app/page.js
-
 'use client';
 
 import { useRef, useEffect } from 'react';
 import Head from 'next/head';
-import styles from './page.module.css'; // Ensure the file is named 'page.module.css'
+import Link from 'next/link';
+import styles from './page.module.css';
 
 export default function Home() {
   const videoRef = useRef(null);
@@ -24,7 +23,6 @@ export default function Home() {
           content="Welcome to My home page, your one-stop page for amazing services."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Add more meta tags as needed */}
       </Head>
 
       {/* Hero Section */}
@@ -39,27 +37,25 @@ export default function Home() {
           playsInline
         />
         <div className={styles.heroContent}>
-          <h1 className={styles.heading}>Welcome to My Home page</h1>{' '}
-          {/* Added className */}
+          <h1 className={styles.heading}>Welcome to My Home page</h1>
           <p className={styles.paragraph}>
             Your one-stop page for amazing services.
-          </p>{' '}
-          {/* Added className */}
-          <button type="button" className={styles.button}>
-            Apply Now
-          </button>
+          </p>
+          <Link href="/sign-up">
+            <button type="button" className={styles.button}>
+              Get Started
+            </button>
+          </Link>
         </div>
       </section>
 
       {/* Features Section */}
       <section className={styles.features}>
         <div className={styles.feature}>
-          <h3 className={styles.featureHeading}>Quality Products</h3>{' '}
-          {/* Added className */}
+          <h3 className={styles.featureHeading}>Quality Products</h3>
           <p className={styles.featureParagraph}>
             We offer only the best products for our customers.
-          </p>{' '}
-          {/* Added className */}
+          </p>
         </div>
         <div className={styles.feature}>
           <h3 className={styles.featureHeading}>Fast Delivery</h3>
@@ -74,8 +70,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-
-      {/* Add more sections as needed */}
     </>
   );
 }

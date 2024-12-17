@@ -1,0 +1,108 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  padding-top: 40px;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.formContainer {
+  background: var(--card-background-color);
+  color: var(--card-text-color);
+  padding: 40px 20px;
+  margin: 40px 0;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.subheading {
+  font-size: 16px;
+  margin-bottom: 24px;
+  /* Was #666; now use card-text-color with opacity for subtle effect */
+  color: var(--card-text-color);
+  opacity: 0.7;
+}
+
+.legalTextTop {
+  font-size: 14px;
+  /* Was #666; now use card-text-color with reduced opacity */
+  color: var(--card-text-color);
+  opacity: 0.7;
+  margin-bottom: 24px;
+}
+
+.oauthBtn {
+  width: 100%;
+  background: var(--card-background-color);
+  color: var(--card-text-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.oauthBtn:hover {
+  background: var(--oauth-hover-background);
+}
+
+.emailBtn {
+  background: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: 2px solid var(--button-border-color);
+}
+
+.emailBtn:hover {
+  background: var(--button-hover-bg-color);
+}
+
+.oauthIcon {
+  font-size: 16px;
+}
+
+.legalTextBottom {
+  font-size: 12px;
+  color: var(---link-color);
+  opacity: 0.6;
+  margin-top: 24px;
+  line-height: 1.5;
+}
+
+.legalTextBottom a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.legalTextBottom a:hover {
+  text-decoration: underline;
+}

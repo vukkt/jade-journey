@@ -1,25 +1,33 @@
-/* src/app/globals.css */
-
-/* Define CSS variables for light and dark themes */
+/* Light theme by default variables */
 :root {
   --background-color: #ffffff;
-  --header-background: rgba(255, 255, 255, 0.8); /* Light header background */
-  --text-color: #000; /* Light text color */
-  --link-color: #0071e3; /* Light link hover color */
+  --header-background: rgba(255, 255, 255, 0.8);
+  --text-color: #000;
+  --link-color: #0071e3;
   --footer-background: #f1f1f1;
-  /* Add more variables as needed */
+  --card-background-color: #ffffff;
+  --button-bg-color: #5c6ac4;
+  --button-text-color: #ffffff;
+  --button-hover-bg-color: #4959a8;
+  --button-border-color: #1e90ff; /* Outline color in dark mode */
+  --oauth-hover-background: #e2e2e2; /* Light hover in light mode */
 }
 
 .dark {
   --background-color: #121212;
-  --header-background: rgba(0, 0, 0, 0.8); /* Dark header background */
-  --text-color: #fff; /* Dark text color */
-  --link-color: #1e90ff; /* Dark link hover color */
+  --header-background: rgba(0, 0, 0, 0.8);
+  --text-color: #fff;
+  --link-color: #1e90ff;
   --footer-background: #1f1f1f;
-  /* Add more variables as needed */
+  --card-background-color: #1e1e1e;
+  --button-bg-color: #3b488f; /* A darker base color for dark mode */
+  --button-text-color: #ffffff;
+  --button-hover-bg-color: #6b79c8; /* Noticeably lighter hover color */
+  --button-border-color: #1e90ff; /* Outline color in dark mode */
+  --oauth-hover-background: #3a3a3a; /* Lighter hover in dark mode */
 }
 
-/* Apply variables */
+/* Apply variables globally */
 body {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -38,5 +46,3 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
-/* Additional global styles as needed */
