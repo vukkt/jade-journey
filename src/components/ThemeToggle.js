@@ -2,8 +2,8 @@
 
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi';
 import styles from './ThemeToggle.module.css';
-import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi'; // Cleaner icons
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
@@ -22,10 +22,15 @@ export default function ThemeToggle() {
   };
 
   return (
-    <div
+    <button
+      type="button"
       className={styles.toggleWrapper}
       onClick={toggleTheme}
-      role="button"
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          toggleTheme();
+        }
+      }}
       aria-label="Toggle Dark Mode"
     >
       <div className={`${styles.toggle} ${isDark ? styles.toggleDark : ''}`}>
@@ -35,6 +40,6 @@ export default function ThemeToggle() {
           <HiOutlineMoon size={14} color="#fff" />
         )}
       </div>
-    </div>
+    </button>
   );
 }

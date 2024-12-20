@@ -1,4 +1,5 @@
 'use client';
+
 import Head from 'next/head';
 import Faq from './Faq'; // Adjust the path if needed
 

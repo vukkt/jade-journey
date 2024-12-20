@@ -4,7 +4,7 @@ import { FaLeaf } from 'react-icons/fa';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styles from './Header.module.css';
-import ThemeToggle from '../components/ThemeToggle'; // Adjust this path if needed
+import ThemeToggle from './ThemeToggle'; // Adjust this path if needed
 
 function Header() {
   const [mounted, setMounted] = useState(false);

@@ -10,11 +10,12 @@
   align-items: center;
   justify-content: flex-start;
   padding: 3px;
+  border: none;
+  outline: none;
 }
 
 .toggleDark {
-  transform: translateX(25px);
-  /* When dark mode, use hover color or another shade if desired */
+  transform: translateX(24px);
   background: var(--button-hover-bg-color);
 }
 
@@ -26,9 +27,9 @@
   transition:
     transform 0.3s,
     background-color 0.3s;
-
-  /* Add these lines to center the icon inside the knob */
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Optional slight horizontal padding if needed */
+  /* padding: 0 1px; */
 }
