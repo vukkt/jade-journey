@@ -5,10 +5,10 @@
   --text-color: #000;
   --link-color: #0071e3;
   --footer-background: #f1f1f1;
-  --card-background-color: #ffffff;
+  --card-background-color: #f1f1f1;
   --button-bg-color: #5c6ac4;
   --button-text-color: #ffffff;
-  --button-hover-bg-color: #4959a8;
+  --button-hover-bg-color: #621eff;
   --button-border-color: #1e90ff; /* Outline color in dark mode */
   --oauth-hover-background: #e2e2e2; /* Light hover in light mode */
 }
@@ -20,9 +20,9 @@
   --link-color: #1e90ff;
   --footer-background: #1f1f1f;
   --card-background-color: #1e1e1e;
-  --button-bg-color: #3b488f; /* A darker base color for dark mode */
+  --button-bg-color: #1e90ff; /* A darker base color for dark mode */
   --button-text-color: #ffffff;
-  --button-hover-bg-color: #6b79c8; /* Noticeably lighter hover color */
+  --button-hover-bg-color: #ffec1e; /* Noticeably lighter hover color */
   --button-border-color: #1e90ff; /* Outline color in dark mode */
   --oauth-hover-background: #3a3a3a; /* Lighter hover in dark mode */
 }

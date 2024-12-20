@@ -1,13 +1,12 @@
 'use client';
 
-import { FaMoon, FaSun, FaLeaf } from 'react-icons/fa';
+import { FaLeaf } from 'react-icons/fa';
 import Link from 'next/link';
-import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import styles from './Header.module.css';
+import ThemeToggle from '../components/ThemeToggle'; // Adjust this path if needed
 
 function Header() {
-  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -15,11 +14,7 @@ function Header() {
     setMounted(true);
 
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -38,13 +33,8 @@ function Header() {
       <nav>
         <ul className={styles.navList}>
           <li>
-            <Link href="/" className={styles.navLink}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/shop" className={styles.navLink}>
-              Shop
+            <Link href="/services" className={styles.navLink}>
+              Services
             </Link>
           </li>
           <li>
@@ -57,16 +47,22 @@ function Header() {
               Contact
             </Link>
           </li>
+
+          <li>
+            <Link href="/blog" className={styles.navLink}>
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link href="/faq" className={styles.navLink}>
+              FAQ
+            </Link>
+          </li>
         </ul>
       </nav>
-      <button
-        type="button"
-        className={styles.themeToggle}
-        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        aria-label="Toggle Dark Mode"
-      >
-        {theme === 'dark' ? <FaSun /> : <FaMoon />}
-      </button>
+
+      {/* Use the ThemeToggle component here */}
+      <ThemeToggle />
     </header>
   );
 }

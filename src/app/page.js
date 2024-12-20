@@ -49,6 +49,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Section 1 - To be populated later */}
+      <section className={styles.section1}>
+        <div className={styles.container}>{/* Add your content here */}</div>
+      </section>
+
+      {/* Section 2 - To be populated later */}
+      <section className={styles.section2}>
+        <div className={styles.container}>{/* Add your content here */}</div>
+      </section>
+
       {/* Features Section */}
       <section className={styles.features}>
         <div className={styles.feature}>
