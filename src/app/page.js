@@ -4,6 +4,7 @@ import { useRef, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from './page.module.css';
+import MyNewComponent from '../components/MyNewComponent';
 
 export default function Home() {
   const videoRef = useRef(null);
@@ -51,7 +52,9 @@ export default function Home() {
 
       {/* Section 1 - To be populated later */}
       <section className={styles.section1}>
-        <div className={styles.container}>{/* Add your content here */}</div>
+        <div className={styles.container}>
+          <MyNewComponent />
+        </div>
       </section>
 
       {/* Section 2 - To be populated later */}
